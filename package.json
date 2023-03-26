@@ -1,0 +1,29 @@
+{
+  "name": "gameslist",
+  "version": "0.1.0",
+  "private": true,
+  "author": "soulsbros",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.9",
+    "@mui/material": "^5.11.10",
+    "next": "13.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.34.0",
+    "prettier": "^2.8.7",
+    "eslint-config-next": "13.2.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1"
+  }
+}
