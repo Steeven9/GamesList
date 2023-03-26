@@ -1,6 +1,13 @@
-import theme from "@/theme";
+import theme from "@/styles/theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
+import { Inter } from "next/font/google";
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import joystick from "../../public/joystick.png";
+import "../styles/global.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
   return (
@@ -11,7 +18,15 @@ export default function App({ Component, pageProps }) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        <main className={inter.className}>
+          <div className="header">
+            <Link href="/">
+              <Image src={joystick} alt="A joystick" width={60} />
+              <h1>GamesList</h1>
+            </Link>
+          </div>
+          <Component {...pageProps} />
+        </main>
       </ThemeProvider>
     </>
   );

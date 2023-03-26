@@ -1,7 +1,5 @@
-import { Inter } from "next/font/google";
 import Head from "next/head";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,7 +8,10 @@ export default function Home() {
         <title>Home - GamesList</title>
         <meta name="description" content="TODO" />
       </Head>
-      <main>asd</main>
+      <div>
+        Hello there! Click <Link href="/games">here</Link> to see the list of
+        games
+      </div>
     </>
   );
 }
