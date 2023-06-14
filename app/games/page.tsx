@@ -1,12 +1,13 @@
-async function getData() {
-  const res = await import("../api/games/route");
-  return await (await res.GET()).json();
-}
+import { Game } from "@/types/game";
 
-//TODO move this out
-interface Game {
-  name: string;
-  genre: string;
+async function getData() {
+  try {
+    const res = await fetch(`${process.env.API_URL}/games`);
+    return res.json();
+  } catch (e) {
+    console.error(e);
+    return [];
+  }
 }
 
 export default async function Games() {
