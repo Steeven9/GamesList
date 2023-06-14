@@ -1,8 +1,9 @@
 import { Game } from "@/types/game";
+import { env } from "../lib/env";
 
 async function getData() {
   try {
-    const res = await fetch(`${process.env.API_URL}/games`);
+    const res = await fetch(`${env.API_URL}/games`);
     return res.json();
   } catch (e) {
     console.error(e);
