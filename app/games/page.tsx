@@ -1,9 +1,9 @@
 import { Game } from "@/types/game";
-import { env } from "../lib/env";
+import { GET } from "../api/games/route";
 
 async function getData() {
   try {
-    const res = await fetch(`${env.API_URL}/games`);
+    const res = await GET();
     return res.json();
   } catch (e) {
     console.error(e);
