@@ -7,6 +7,6 @@ export const env = createEnv({
   },
   client: {},
   runtimeEnv: {
-    MONGODB_URI: process.env.MONGODB_URI || "mongodb://mongodb",
+    MONGODB_URI: process.env.MONGODB_URI || "mongodb://mongo",
   },
 });
